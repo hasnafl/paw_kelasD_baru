@@ -6,7 +6,7 @@ php:
   # using major version aliases
 
   # aliased to a recent 5.6.x version
-  - 5.6.28
+  - 5.6
   # aliased to a recent hhvm version
   - hhvm
 
@@ -21,7 +21,7 @@ matrix:
       env: DB=mysql  # PDO driver for pgsql is unsupported by HHVM (3rd party install for support)
   allow_failures:
     - php: hhvm
-    - php: 5.6.28
+    - php: 5.6
     
 
 # execute any number of scripts before the test run, custom env's are available as variables
