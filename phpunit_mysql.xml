@@ -1,29 +1,35 @@
-<phpunit
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/5.4/phpunit.xsd"
-        colors="true"
-        backupGlobals="false"
-        bootstrap="test/autoload.php"
->
+<?xml version="1.0" encoding="UTF-8"?>
 
-    <filter>
-        <whitelist
-                addUncoveredFilesFromWhitelist="true"
-                processUncoveredFilesFromWhitelist="true">
-
-            <directory suffix="file.php.php">test/</directory>
-        </whitelist>
-    </filter>
-
-    <logging>
-        <log type="coverage-html" target="./tests/coverage/html/"/>
-        <log type="coverage-clover" target="./tests/coverage/coverage.xml"/>
-    </logging>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         syntaxCheck="true"
+         forceCoversAnnotation="true"
+         bootstrap="test/autoload.php">
+    <php>
+        <var name="db_dsn" value="mysql:dbname=klinik;host=localhost"/>
+        <var name="db_username" value="root"/>
+        <var name="db_password" value=""/>
+    </php>
 
     <testsuites>
-        <testsuite name="Unit Tests">
-            <directory suffix="file.php">test/</directory>
+        <testsuite name="pdotest suite">
+            <directory suffix=".php">test</directory>
+            <file>test/pdotest.php</file>
         </testsuite>
     </testsuites>
 
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix>test</directory>
+            <file>test/pdotest.php</file>
+            <exclude>
+                <directory>test</directory>
+                <file>pdotest/file.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
 </phpunit>
