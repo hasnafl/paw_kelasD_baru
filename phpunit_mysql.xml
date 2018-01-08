@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit bootstrap="test/autoload.php" colors="true">
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         syntaxCheck="true"
+         forceCoversAnnotation="true"
+         bootstrap="test/autoload.php">
     <php>
         <var name="db_dsn" value="mysql:dbname=klinik;host=localhost"/>
         <var name="db_username" value="root"/>
