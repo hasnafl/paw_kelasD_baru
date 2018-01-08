@@ -10,10 +10,6 @@
 			$database = "klinik";
 			$connect = mysqli_connect($host,$user,$password,$database);
 			$login=mysqli_query($connect, "SELECT * FROM login where username = 'klinik1'");
-			if (!$login) {
-    			printf("Error: %s\n", mysqli_error($connect));
-    			exit();
-			}
 			$user = mysqli_fetch_array($login);
 			$test = $user['password'];
 			$content = $test;
