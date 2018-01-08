@@ -23,7 +23,7 @@ class file extends PHPUnit_Framework_TestCase
 	   $row = $admin->fetch(PDO::FETCH_ASSOC);
 	   $test = $row['password'];
 	   $content = $test;
-	   $this->assertEquals(12345, $content);
+	   $this->assertEquals('12345', $content);
 	}
 }
 ?>
