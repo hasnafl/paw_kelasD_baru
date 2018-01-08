@@ -11,7 +11,7 @@
                 addUncoveredFilesFromWhitelist="true"
                 processUncoveredFilesFromWhitelist="true">
 
-            <directory suffix=".php">./test</directory>
+            <directory suffix=".php">test</directory>
         </whitelist>
     </filter>
 
@@ -22,7 +22,7 @@
 
     <testsuites>
         <testsuite name="Unit Tests">
-            <directory suffix="file.php">./test</directory>
+            <directory suffix="file.php">test</directory>
         </testsuite>
     </testsuites>
 
