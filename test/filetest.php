@@ -1,17 +1,18 @@
 <?php
 
-$host = "localhost";
+
+
+class testing extends PHPUnit_Framework_TestCase
+{
+    function testPassword()
+    {
+        $host = "localhost";
 $user = "root";
 $password = "";
 $database = "klinik";
 
 mysql_connect($host, $user, $password) or die ("koneksi gagal");
 mysql_select_db($database) or die ("Database tidak ditemukan");
-
-class testing extends PHPUnit_Framework_TestCase
-{
-    function testPassword()
-    {
         $sql = mysql_query("SELECT * FROM login where username = 'klinik1'");
         $exe = mysql_fetch_array($sql);
         $test_user = $exe['password'];
@@ -21,6 +22,13 @@ class testing extends PHPUnit_Framework_TestCase
 
     function testUsername()
     {
+        $host = "localhost";
+$user = "root";
+$password = "";
+$database = "klinik";
+
+mysql_connect($host, $user, $password) or die ("koneksi gagal");
+mysql_select_db($database) or die ("Database tidak ditemukan");
         $sql = mysql_query("SELECT * FROM login where password = '12345'");
         $exe = mysql_fetch_array($sql);
         $test_user = $exe['username'];
