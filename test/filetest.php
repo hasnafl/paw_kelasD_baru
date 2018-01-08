@@ -1,11 +1,11 @@
 <?php
 
-$server = "localhost";
+$host = "localhost";
 $user = "root";
 $password = "";
 $database = "klinik";
 
-mysql_connect($server, $user, $password) or die ("koneksi gagal");
+mysql_connect($host, $user, $password) or die ("koneksi gagal");
 mysql_select_db($database) or die ("Database tidak ditemukan");
 
 class testing extends PHPUnit_Framework_TestCase
