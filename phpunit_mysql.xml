@@ -16,7 +16,7 @@
     </php>
 
     <testsuites>
-        <testsuite name="file test suite">
+        <testsuite name="pdotest suite">
             <directory>test</directory>
             <file>test/pdotest.php</file>
         </testsuite>
