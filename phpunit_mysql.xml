@@ -23,7 +23,7 @@
     </testsuites>
 
     <filter>
-        <whitelist>
+        <whitelist processUncoveredFilesFromWhitelist="true">
             <directory>test</directory>
             <file>test/pdotest.php</file>
             <exclude>
