@@ -17,14 +17,14 @@
 
     <testsuites>
         <testsuite name="pdotest suite">
-            <directory suffix=".php">test</directory>
+            <directory>test</directory>
             <file>test/pdotest.php</file>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix>test</directory>
+            <directory suffix=".php">test</directory>
             <file>test/pdotest.php</file>
             <exclude>
                 <directory>test</directory>
