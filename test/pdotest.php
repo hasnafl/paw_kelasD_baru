@@ -20,10 +20,10 @@ class file extends PHPUnit_Framework_TestCase
        $dbh = new PDO('mysql:host=localhost;dbname=klinik',"root", "");
 	   $admin = $dbh->prepare("SELECT * FROM login WHERE username = 'klinik1'");
 	   $admin->execute();
-	   $row = $admin->fetchColumn();
+	   $row = $admin->fetch(PDO::FETCH_ASSOC);
 	   $test = $row['password'];
 	   $content = $test;
-	   $this->assertEquals('12345', $content);
+	   $this->assertEquals(12345, $content);
 	}
 }
 ?>
