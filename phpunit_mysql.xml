@@ -8,7 +8,7 @@
          convertWarningsToExceptions="true"
          syntaxCheck="true"
          forceCoversAnnotation="true"
-         bootstrap="vendor/autoload.php">
+         bootstrap="test/autoload.php">
     <php>
         <var name="db_dsn" value="mysql:dbname=klinik;host=localhost"/>
         <var name="db_username" value="root"/>
