@@ -28,7 +28,7 @@
             <file>test/pdotest.php</file>
             <exclude>
                 <directory>test</directory>
-                <file>pdotest/file.php</file>
+                <file>pdotest/pdotest.php</file>
             </exclude>
         </whitelist>
     </filter>
