@@ -24,7 +24,7 @@
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">test</directory>
+            <directory suffix="pdotest.php">test</directory>
             <file>test/pdotest.php</file>
             <exclude>
                 <directory>test</directory>
